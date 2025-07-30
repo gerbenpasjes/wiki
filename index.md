@@ -1,8 +1,3 @@
-[[Welcome]](/wiki/Welcome.html) - go to welcome.html
-[[Welcome]](/wiki/Welcome.md) - go to welcome.md
+[[Welcome]](/wiki/Welcome.html) - go to welcome.html, which doesn't exist but it will render anyway
 
-![[02-01-2023.jpg]]
-
-(/wiki/img/02-01-2023.jpg)
-
-<img src="/wiki/img/02-01-2023.jpg>
+[[Welcome]](/wiki/Welcome.md) - go to welcome.md, the real source file of the above page
