@@ -1,9 +1,9 @@
-See also: [index]
+See also: [index] - this doesn't work
 
-See also: [index](/wiki/index)
+See also: [index](/wiki/index) - this works best
 
-See also: [index](/wiki/index.md)
+See also: [index](/wiki/index.md) - this links to source file
 
-See also: [index](/wiki/index.html)
+See also: [index](/wiki/index.html) - this works
 
-[Civilization 7 Wall Materials, Clark Coots](https://www.artstation.com/artwork/8BPKKQ)
+[Civilization 7 Wall Materials, Clark Coots](https://www.artstation.com/artwork/8BPKKQ) - this works best
