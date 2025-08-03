@@ -1,0 +1,751 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Materials</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(50, 48, 44, 1);
+}
+.highlight-gray {
+	color: rgba(115, 114, 110, 1);
+	fill: rgba(115, 114, 110, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(205, 60, 58, 1);
+	fill: rgba(205, 60, 58, 1);
+}
+.highlight-default_background {
+	color: rgba(50, 48, 44, 1);
+}
+.highlight-gray_background {
+	background: rgba(248, 248, 247, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(248, 243, 252, 1);
+}
+.highlight-pink_background {
+	background: rgba(252, 241, 246, 1);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(115, 114, 110, 1);
+	fill: rgba(115, 114, 110, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(205, 60, 58, 1);
+	fill: rgba(205, 60, 58, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(248, 248, 247, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(248, 243, 252, 1);
+}
+.block-color-pink_background {
+	background: rgba(252, 241, 246, 1);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-default { background-color: rgba(84, 72, 49, 0.08); }
+.select-value-color-gray { background-color: rgba(84, 72, 49, 0.15); }
+.select-value-color-brown { background-color: rgba(210, 162, 141, 0.35); }
+.select-value-color-orange { background-color: rgba(224, 124, 57, 0.27); }
+.select-value-color-yellow { background-color: rgba(236, 191, 66, 0.39); }
+.select-value-color-green { background-color: rgba(123, 183, 129, 0.27); }
+.select-value-color-blue { background-color: rgba(93, 165, 206, 0.27); }
+.select-value-color-purple { background-color: rgba(168, 129, 197, 0.27); }
+.select-value-color-pink { background-color: rgba(225, 136, 179, 0.27); }
+.select-value-color-red { background-color: rgba(244, 171, 159, 0.4); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="e461b1ce-7f8a-483a-95f6-fb8e0d9013e9" class="page sans"><header><div class="page-header-icon undefined"><img class="icon" src="https://cdn.allegorithmic.com/files/academy/86927929-a961-4699-8453-adfad7501a88"/></div><h1 class="page-title">Materials</h1><p class="page-description"></p></header><div class="page-body"><div id="37488779-99ed-4ea6-af07-e614faf1a928" class="column-list"><div id="5ea47ba3-830c-4171-aee5-0ccd7e6b1ceb" style="width:50%" class="column"><nav id="349704a0-026a-4d6d-8bdc-696c694f42d8" class="block-color-gray table_of_contents"><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#f52f193e-0121-48e8-bc34-74da62224110">What are materials</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#eb87f90c-b3b6-4f40-b057-3fba437bd034">BSDF vs BRDF vs BTDF</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#59e81f84-2b19-4264-b263-36c2ecba38e6">Shader vs Material</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#981a5619-5a67-49bf-8e04-7892f632b5a3">PBS (physically based shading)</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#a950b37a-5770-4416-9498-21ee4b979361">PBS vs PBR</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#da84e77d-9f79-43e7-854b-8a046ffbd4f9">Why is it important?</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#49dc01e1-d52f-4b26-b004-f2b79b702d88">Getting started</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#0e1fe783-91f5-49ec-8333-615e3aa16ac1">Physically based values</a></div><div class="table_of_contents-item table_of_contents-indent-2"><a class="table_of_contents-link" href="#a5009537-4d92-4225-8471-0f8455a2e801">Diffuse (sometimes referred to as base color or albedo)</a></div><div class="table_of_contents-item table_of_contents-indent-2"><a class="table_of_contents-link" href="#73474495-56d4-445c-81d3-e871886857c0">Diffuse in dieletric (metallic) materials</a></div><div class="table_of_contents-item table_of_contents-indent-2"><a class="table_of_contents-link" href="#49bbf309-f242-45ae-8df8-97b623c51f55">Specular (and cavity)</a></div><div class="table_of_contents-item table_of_contents-indent-2"><a class="table_of_contents-link" href="#1aee354e-7eed-8073-ac0d-f0e5608ed196">Specular resources</a></div><div class="table_of_contents-item table_of_contents-indent-2"><a class="table_of_contents-link" href="#f556641f-628e-4b4f-aab9-f9a106a63665">Roughness</a></div><div class="table_of_contents-item table_of_contents-indent-2"><a class="table_of_contents-link" href="#9935d1f8-2360-42f9-8175-b3120ab71c3c">Diffuse reflection vs specular reflection</a></div><div class="table_of_contents-item table_of_contents-indent-2"><a class="table_of_contents-link" href="#b56c0882-d88d-49fd-82f3-b28ed9a7c7c1">Roughness vs specular</a></div><div class="table_of_contents-item table_of_contents-indent-2"><a class="table_of_contents-link" href="#38b78caf-e0ba-455b-a57e-79028abf15aa">Specular vs Roughness workflows</a></div><div class="table_of_contents-item table_of_contents-indent-2"><a class="table_of_contents-link" href="#905aa78d-20fc-4b53-af31-a8ceca966ac0">Specular workflow</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#b0c64369-3344-4172-a012-6741c7e3d040">Optimizing materials</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#afd38a94-7ad5-497a-9dc1-2f6a6ea6d13d">Channel packing</a></div><div class="table_of_contents-item table_of_contents-indent-2"><a class="table_of_contents-link" href="#0399f47c-96e5-4aec-ab2f-809b9eb25b48">Channel packing overview</a></div><div class="table_of_contents-item table_of_contents-indent-2"><a class="table_of_contents-link" href="#dfb73d24-8a16-4b21-8352-314acb547607">Channel packing with normals</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#7fe4b0e3-a653-4d07-8ff5-1c1f10fbaa40">Reducing shader instruction count</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#dedde034-c6ee-4517-8b2c-e5938045feee">Advanced material techniques</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#86e4675d-a902-445e-801c-f98e3c996f8d">UV/UDIM</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#08852ea8-03bb-4b81-8d02-5f31ec431cb3">Custom Primitive Data (UE only)</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#72be1665-ce82-4dc9-a1ca-19eef18c3f5a">Triplanar mapping</a></div><div class="table_of_contents-item table_of_contents-indent-2"><a class="table_of_contents-link" href="#cc6bbcb6-310a-4b83-95e7-b98e0ca26993">World aligned</a></div><div class="table_of_contents-item table_of_contents-indent-2"><a class="table_of_contents-link" href="#c184b758-f343-462c-a1e8-5721970d9a03">Object aligned</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#c429ab7f-1cdf-4dd7-beb6-4d453275b5cb">Naming conventions</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#4ff49e5d-7eb8-4cdd-a383-5c9dd472ed57">Epic’s recommendations</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#81f5be76-aa7d-42fc-af47-12ee820c34f8">Ready at Dawn</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#92995643-9e1d-4496-8fea-aa0dfae144e7">Resources, see also</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#30b4b5cd-f060-4321-8248-99f6f77237ef">Material &amp; texture artists</a></div></nav><p id="163cc109-0fca-4086-81b2-399c86e4ef20" class="">
+</p></div><div id="5ee069a0-dbe5-431c-967d-ebdb5550e5f7" style="width:50%" class="column"><p id="41c9c026-8c62-49e5-ade6-d1247483499e" class="">See also:</p><figure id="5f2cd441-f261-4496-986e-12b7faecb367" class="link-to-page"><a href="https://www.notion.so/Textures-5f2cd441f2614496986e12b7faecb367?pvs=21"><img class="icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Subpixel.png/220px-Subpixel.png"/>Textures</a></figure><figure id="83217af9-00ee-42b4-ab8f-5c2de48b6b48" class="link-to-page"><a href="https://www.notion.so/Look-Development-Process-83217af900ee42b4ab8f5c2de48b6b48?pvs=21"><span class="icon">📷</span>Look Development Process</a></figure><figure id="2feb77a5-d47b-408c-9bd7-f67e12507748" class="link-to-page"><a href="https://www.notion.so/Gradient-Mapping-2feb77a5d47b408c9bd7f67e12507748?pvs=21"><img class="icon" src="https://upload.wikimedia.org/wikipedia/commons/8/83/LCH_Gradient_Example.png"/>Gradient Mapping</a></figure><figure id="836bd696-b3d9-46d4-8eb6-f84835ab71a6" class="link-to-page"><a href="https://www.notion.so/Lighting-836bd696b3d946d48eb6f84835ab71a6?pvs=21"><span class="icon">🔆</span>Lighting</a></figure></div></div><h1 id="f52f193e-0121-48e8-bc34-74da62224110" class="">What are materials</h1><div id="b5ff6896-d9a7-410d-a150-428c7b38ec65" class="column-list"><div id="acc6bf9b-b770-40e0-900a-fda56fd344cb" style="width:50%" class="column"><p id="01064f9b-360d-4f34-b6ac-85a0922cb58d" class="">A material is an asset that can be applied to geometry to define its shading. This shading is usually only visible when a light hits the surface, so lighting plays a huge role in materials. The exception is in shader models such as unlit. </p><p id="022973e3-e721-49ff-8784-2322455dbdeb" class="">In a material you can define the value of parameters that are available from the shader, such as the color, roughness, and so on. Most of the time when we talk about a shader, it’s a BSDF based on the work Brian Karis. You can see the work that Brian Karis did in this paper:</p><figure id="21fe78a6-2238-467a-9f7c-65104b9aeba3"><div class="source"><a href="2013_Siggraph_UE4_BrianKaris.pdf">2013_Siggraph_UE4_BrianKaris.pdf</a></div></figure><p id="ef270aa0-e7a6-4e12-a84a-5969abe14dea" class="">This collection of papers does a great job at explaining the ground work of real-time PBR: <a href="https://blog.selfshadow.com/publications/s2012-shading-course/">https://blog.selfshadow.com/publications/s2012-shading-course/</a> </p><p id="b73f7dbf-0f69-40bc-9f13-347eaca1373f" class="">Mind you, not all shaders are BSDFs! <a href="https://www.shadertoy.com/">https://www.shadertoy.com/</a> has some great examples of crazy shaders written in HLSL. </p></div><div id="30a2262e-b400-4e5b-9b21-4a477d4020e2" style="width:50%" class="column"><figure id="036c7ecd-a57e-4a0c-a718-766a46d3f4eb" class="image"><a href="Untitled.png"><img style="width:336px" src="Untitled.png"/></a></figure><figure id="4b2c30e5-721e-4034-b97b-138d6cbb9467" class="image"><a href="Untitled%201.png"><img style="width:1600px" src="Untitled%201.png"/></a></figure></div></div><h3 id="eb87f90c-b3b6-4f40-b057-3fba437bd034" class="">BSDF vs BRDF vs BTDF</h3><div id="b0256108-baeb-4c39-8087-7aad3b4b4d94" class="column-list"><div id="a07273d1-881b-4602-aef5-70153f274ea5" style="width:50%" class="column"><p id="c3f1782b-5ade-4ee1-bd38-d77767f2bd5a" class="">BSDF is a superset and the generalization of the BRDF and BTDF. The concept behind all BxDF functions could be described as a 4-dimensional function: a function of light direction (l) and view direction (v), the normal of the surface (n), and surface tangent (t). </p><figure id="c1d41674-86d4-4b8a-ac8a-a34c8d0252ee" class="image"><a href="Untitled%202.png"><img style="width:340px" src="Untitled%202.png"/></a></figure></div><div id="0d44665d-7836-4062-af9e-086f6090b8c5" style="width:50%" class="column"><figure id="e027bc47-cba1-4cec-852f-f38b502acd73" class="image"><a href="Untitled%203.png"><img style="width:331px" src="Untitled%203.png"/></a></figure></div></div><p id="a35d372c-154a-425a-b4a5-3efbc0f010d3" class="">The Base Color, Roughness, or Normal inputs of a BSDF are all BRDFs in their own right, with their own calculations. These inputs are always numbers, but the way we describe those numbers can be using math, flat values, or textures. Textures are really just 2 or 3 dimensional collection of numbers. </p><figure id="5f2cd441-f261-4496-986e-12b7faecb367" class="link-to-page"><a href="https://www.notion.so/Textures-5f2cd441f2614496986e12b7faecb367?pvs=21"><img class="icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Subpixel.png/220px-Subpixel.png"/>Textures</a></figure><p id="ba12720b-6f59-42ff-b453-45d603317f3a" class="">The bidirectional scattering distribution function (BSDF) radiometrically characterizes the scatter of optical radiation from a surface as a function of the angular positions of the incident and scattered beams. By definition, it is the ratio of the scattered radiance to the incident irradiance: the unit is inverse steradian. The term bidirectional reflectance distribution function (BRDF) is used when specifically referring to reflected scatter. Likewise, bidirectional transmittance distribution function (BTDF) refers to scatter transmitted through a material. Read more <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4930030/">here</a>. </p><figure id="5d19d19c-51a7-4593-a74a-65f22b6e0150" class="image"><a href="Untitled%204.png"><img style="width:590px" src="Untitled%204.png"/></a></figure><h3 id="59e81f84-2b19-4264-b263-36c2ecba38e6" class="">Shader vs Material</h3><p id="43d5d688-97ce-471c-a275-11769d5aad67" class="">A shader is a small program that tells the GPU how to <em>shade </em>an object on the screen and the calculations required to get there. </p><p id="f35ec7c4-512e-4f5c-b86e-ec3d3f5704cf" class="">Shaders have the following prerequisites:</p><ul id="80b42af4-ad1c-4995-9062-b1b2f1c2abeb" class="bulleted-list"><li style="list-style-type:disc">A shader needs to be attached to a material used</li></ul><ul id="3d377c67-e080-42c5-afb1-adbc261fe76a" class="bulleted-list"><li style="list-style-type:disc">A scripting language used to author shaders, such as HLSL and GLSL</li></ul><p id="f19841a2-2fb2-4124-a4ad-f5dc855eff2c" class="">A shader and a material can be used in different ways, depending on the game engine. In Unreal Engine, the shader used can be based on the target platform selected.</p><p id="0efcfaa7-cb5f-4e4b-b8ab-c1a73d0cd03a" class="">There are generally two ways to do materials; PBR (physically based rendering/shading) and NPR (non-photoreal rendering/shading). The type of shader you use doesn’t imply one or the other, because there are plenty of ways to “break” a PBR shader by giving it “wrong” inputs (more on that later). </p><h1 id="981a5619-5a67-49bf-8e04-7892f632b5a3" class="">PBS (physically based shading)</h1><h2 id="a950b37a-5770-4416-9498-21ee4b979361" class="">PBS vs PBR</h2><blockquote id="f4444fed-2c45-44b5-b46a-b47a708c934f" class="">Physically Based Rendering (PBR) is a method of shading and rendering that provides a more accurate representation of how light interacts with surfaces. It can be referred to as Physically Based Rendering (PBR) or Physically Based Shading (PBS). Depending on what aspect of the pipeline is being discussed, PBS is usually specific to shading concepts and PBR specific to rendering and lighting. However, both terms describe on a whole, the process of representing assets from a physically accurate standpoint. - Wes McDermott</blockquote><figure id="42704f27-3d99-41fd-81f0-b345f0ec504d"><a href="https://learndownload.adobe.com/pub/learn/substance-3d-designer/the-pbr-guide.pdf" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title"></div></div><div class="bookmark-href">https://learndownload.adobe.com/pub/learn/substance-3d-designer/the-pbr-guide.pdf</div></div></a></figure><h2 id="da84e77d-9f79-43e7-854b-8a046ffbd4f9" class="">Why is it important?</h2><p id="113f2109-47fc-48f0-9778-1e049846ee79" class="">Less guessing, more out-of-the-box, more guidelines online, self-diagnosable. </p><h2 id="49dc01e1-d52f-4b26-b004-f2b79b702d88" class="">Getting started</h2><figure id="643fc8e6-786c-4979-9580-54fb755fd6ef" class="image"><a href="Untitled%205.png"><img style="width:707.9833374023438px" src="Untitled%205.png"/></a></figure><h2 id="0e1fe783-91f5-49ec-8333-615e3aa16ac1" class="">Physically based values</h2><p id="067e3bdc-3c36-4225-bb93-6a6a43d78d7c" class="">Educate yourself with some good values. <div class="indented"><p id="e2dcd183-c051-4837-a1d8-c66ac6f578d8" class=""><a href="https://seblagarde.wordpress.com/2014/04/14/dontnod-physically-based-rendering-chart-for-unreal-engine-4/">https://seblagarde.wordpress.com/2014/04/14/dontnod-physically-based-rendering-chart-for-unreal-engine-4/</a> the original. </p><p id="50a1d2ae-c99b-4ff4-bf82-d147d6c4e340" class=""><a href="https://google.github.io/filament/Material%20Properties.pdf">https://google.github.io/filament/Material Properties.pdf</a> &amp; <a href="https://google.github.io/filament/images/material_chart.jpg">https://google.github.io/filament/images/material_chart.jpg</a> very good image explaining all the parameters. </p><p id="e0ba106a-ad91-4c0d-8340-588e782049db" class=""><a href="https://physicallybased.info/">https://physicallybased.info/</a> has slightly more numbers. </p><p id="7997d2b9-b352-4ab1-9e00-5faf2a24b23f" class=""><a href="https://gbaran.gumroad.com/l/rjthlk">https://gbaran.gumroad.com/l/rjthlk</a> has a lot of numbers. </p><p id="89b6ecee-a2c8-40a7-9b74-b48e9ddecdbf" class=""><a href="https://docs.unrealengine.com/5.2/en-US/physically-based-materials-in-unreal-engine/">https://docs.unrealengine.com/5.2/en-US/physically-based-materials-in-unreal-engine/</a> the Unreal documentation also has numbers. </p><p id="49cd9209-7280-45ce-92f5-5917da74ebea" class="">I found another source that notes this:</p><ul id="c59af628-20cf-4700-a663-65e6a0c8d7d7" class="bulleted-list"><li style="list-style-type:disc">Red: Dielectric materials must be inside [30-240] sRGB</li></ul><ul id="55ddd0ef-35cb-42fd-98ec-cb05cb1c8532" class="bulleted-list"><li style="list-style-type:disc">Orange: Metallic materials must be inside [186-255] sRGB</li></ul><ul id="49ad2239-e2ff-4eac-9009-7acb3425d797" class="bulleted-list"><li style="list-style-type:disc">Blue: Glass materials must have a fresnel reflectance inside [52-114] sRGB</li></ul><ul id="9d7921cd-f54f-47d3-b834-14d479375a18" class="bulleted-list"><li style="list-style-type:disc">Yellow: Metallic materials must have a value near 0 or near 1, in-between values are often an error</li></ul></div></p><p id="1cfe9d8c-2bfa-4e94-afa8-cbb5f670659d" class=""><a href="https://physicallybased.info/tools/">https://physicallybased.info/tools/</a> Tool to transform between color encodings. </p><figure id="dd859007-23cb-4776-a83f-4978343d19e5" class="image"><a href="Untitled%206.png"><img style="width:708px" src="Untitled%206.png"/></a></figure><figure id="5dc6993c-30aa-4b2a-a0fe-d634afcdb431" class="image"><a href="https://seblagarde.files.wordpress.com/2014/04/dontnodgraphicchartforunrealengine4.png"><img src="https://seblagarde.files.wordpress.com/2014/04/dontnodgraphicchartforunrealengine4.png"/></a></figure><figure id="33aec5ac-5965-4d43-97f3-7fcef553db41" class="image"><a href="Untitled.jpeg"><img style="width:720px" src="Untitled.jpeg"/></a></figure><h3 id="a5009537-4d92-4225-8471-0f8455a2e801" class="">Diffuse (sometimes referred to as base color or albedo)</h3><p id="0d2b38b5-c834-4eb4-bc7f-5bf38423a9c1" class="">Correct values should generally fall within the darkest and brightest natural element found on earth, coal and fresh snow. For dielectric (non-metals) this is:</p><ul id="091019fb-ef25-440e-9a21-bd55e23ad0b1" class="bulleted-list"><li style="list-style-type:disc">sRGB 50 - 243</li></ul><ul id="c30d0917-10f1-477b-b874-31b80cc676f6" class="bulleted-list"><li style="list-style-type:disc">Linear 0.0319 - 0.89627</li></ul><p id="c2d3fca4-42e5-4506-8b5d-609ab0722a4c" class="">For non-dielectric (metals) this range is:</p><ul id="2df87f63-7e25-4d35-adf4-9925dfb60e08" class="bulleted-list"><li style="list-style-type:disc">sRGB 180 - 255</li></ul><ul id="6131b67f-eaf7-4924-a778-19b681d9dedf" class="bulleted-list"><li style="list-style-type:disc">Linear 0.45641 - 1</li></ul><p id="fe6c966e-e4f7-4cf1-a948-b7995211e3d9" class="">You can test these values in Substance Painter/Designer using the PBR Validate nodes. In Unreal you can build a post-process material that can validate it for you:<div class="indented"><p id="090805b0-a562-4822-a49f-78bf15cdf469" class=""><a href="https://80.lv/articles/validating-pbr-materials-in-ue4/">https://80.lv/articles/validating-pbr-materials-in-ue4/</a></p></div></p><p id="84a3fdd6-15bb-4f0e-be81-8c635a476fe8" class="">The name <em><em><em><em><em><em><em>diffuse</em></em></em></em></em></em></em> comes from the fact that they are responsible for <em><em><em><em><em><em><em><em><em><em><em><em><em><em><em><em><em><em>diffuse reflection </em></em></em></em></em></em></em></em></em></em></em></em></em></em></em></em></em></em>(see Diffuse reflection vs Specular reflection), which is the phenomena responsible for giving materials a color in real life. In general, diffuse values are much brighter then you’d think, which makes authoring them a little bit challenging. If your diffuse maps are too dark, you will see much less light bouncing around the scene than you would expect (see Roughness vs Specular). </p><figure id="bd7359cd-8e1d-430d-83cf-c22ded5953bc" class="image"><a href="Untitled%207.png"><img style="width:708px" src="Untitled%207.png"/></a></figure><h3 id="73474495-56d4-445c-81d3-e871886857c0" class="">Diffuse in dieletric (metallic) materials</h3><p id="27ef209e-abd4-41ad-b87b-cc8a3aada634" class="">If a shader’s metallic input is above a certain value (near 1.0), the color of the diffuse map is used to color the specular response. That is also why diffuse maps for metals should be authored very brightly (&gt;180 sRGB). </p><h3 id="49bbf309-f242-45ae-8df8-97b623c51f55" class="">Specular (and cavity)</h3><p id="a1d115b2-09b6-4508-ac14-669b5bf2200c" class="">Specular should generally be kept at .5 which equals to about 4% reflectance, which is good for the vast majority of materials. However, we can use Cavity Maps (small scale ambient occlusion) and multiply with .5 to help the rendering engine occlude more on small scale. This can be helpful because real-time renderers can’t get so granular as is sometimes required. </p><h3 id="1aee354e-7eed-8073-ac0d-f0e5608ed196" class="">Specular resources</h3><p id="1afe354e-7eed-80fb-88d5-f11aff48f041" class=""><a href="https://campi3d.com/External/MariExtensionPack/userGuide5R8/IORtoSpecularLeveldielectric.html">https://campi3d.com/External/MariExtensionPack/userGuide5R8/IORtoSpecularLeveldielectric.html</a> </p><p id="1aee354e-7eed-806c-8e43-d1ac9c9cf701" class=""><a href="https://mssiphiwemoyo.com/blog/a-z-ior-values-complete-guide/">https://mssiphiwemoyo.com/blog/a-z-ior-values-complete-guide/</a> </p><p id="1afe354e-7eed-804e-97e7-fc39e2f39eba" class=""><a href="https://physicallybased.info/tools/">https://physicallybased.info/tools/</a> Calculator for translating IOR values into Specular ones. </p><p id="214e354e-7eed-80d2-9664-f0e20001542b" class=""><a href="https://pixelandpoly.com/ior.html">https://pixelandpoly.com/ior.html</a> </p><h3 id="f556641f-628e-4b4f-aab9-f9a106a63665" class="">Roughness</h3><div id="d440f6b3-54af-428a-b0df-62c63f953dc0" class="column-list"><div id="69ec6072-7e6e-405c-b445-890ab18c2008" style="width:68.75%" class="column"><p id="59e9d4b6-d031-4136-9980-76941d6773e6" class="">In real life, the phenomena of roughness is the result of light scattering inside the material into many different directions due to micro-detail in the material (on the micro-meter scale). The light that is exiting the material again is considered “bounce light”. </p><p id="31c6ea6b-8337-4800-b5a8-f16ab6eb3b27" class="">The surface shown here on the right is too small scale to approach in geometry, so in rendering engines we lean on roughness maps, but also micro-normal maps to emulate it.</p><p id="2d1b145b-2f18-4daa-ab7e-e526c6d6a680" class="">In materials, the roughness input controls how rough or smooth a surface is. In the material this manifests as how sharp or blurry reflections appear on the material. </p><p id="d855e021-5765-4da7-b485-b2dbc8994b0a" class=""><em><em><em><em>Hard</em></em></em></em> materials have very dense structures and therefore do not allow the light to scatter inside their structures a lot. <em><em><em><em>Soft</em></em></em></em> materials (like skin) have a lot of scattering going on, which we can replicate using <em><em><em><em><em><em><em><em><em><em><em><em><em><em><em><em><em><em><em><em><em>subsurface scattering</em></em></em></em></em></em></em></em></em></em></em></em></em></em></em></em></em></em></em></em></em>. </p></div><div id="29139e8f-0863-436e-911e-6cf80dfa259b" style="width:31.25%" class="column"><figure id="7a4ba987-0d00-4e52-addb-7ea4754c79b8" class="image"><a href="Untitled%208.png"><img style="width:192px" src="Untitled%208.png"/></a></figure></div></div><figure id="05971f8c-034c-4b2f-927f-238b08077654" class="image"><a href="smoothness_roughness_surface.jpg"><img style="width:708px" src="smoothness_roughness_surface.jpg"/></a><figcaption>Not only roughness influences the sharpness of the reflection, also a micro-normal emulating tiny geometric details influences the sharpness of the reflection. </figcaption></figure><h3 id="9935d1f8-2360-42f9-8175-b3120ab71c3c" class="">Diffuse reflection vs specular reflection</h3><p id="c49e7908-8214-451a-bf11-31964629a709" class="">It’s important to note the difference between the specular reflection and the diffuse reflection of a material. </p><div id="df021902-b59e-4a92-98a0-fc404c716013" class="column-list"><div id="0c2ea946-e215-4f38-b27f-5bd3570c7c8a" style="width:50%" class="column"><p id="b8acebcd-cfa9-400b-b4a2-391efeb0ac1e" class="">The diffuse reflection is responsible for scattering light <em><em><em><em><em><em>around</em></em></em></em></em></em>, most of which appears to us via surrounding surfaces. Specular reflection is the light that is reflected directly into our eyes. </p><p id="b4ce73c2-95ee-43c7-be86-515291c635fc" class="">In the case of colored objects (absorbent), diffused rays will lose some wavelengths during their walk in the material, and will emerge colored. And, when a colored object has both diffuse and specular reflection, usually only the diffuse component is colored. </p><p id="00635ce1-f016-400b-bc88-8ceecb1203a4" class="">A cherry reflects diffusely red light, absorbs all other colors and has a specular reflection which is essentially white (if the incident light is white light). This is quite general, because, except for metals, the reflectivity of most materials depends on their refractive index, which varies little with the wavelength, so that all colors are reflected nearly with the same intensity.</p></div><div id="4f022cf0-53b5-4e0a-a84f-ec6881c4e2db" style="width:50%" class="column"><figure id="b4dc9757-77db-430f-9312-cd438156eee6" class="image"><a href="Untitled%209.png"><img style="width:240px" src="Untitled%209.png"/></a></figure><figure id="6eef5bec-367a-4439-9817-43ffa759f302"><a href="https://en.wikipedia.org/wiki/Diffuse_reflection" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Diffuse reflection</div><div class="bookmark-description">Diffuse reflection is the reflection of light or other waves or particles from a surface such that a ray incident on the surface is scattered at many angles rather than at just one angle as in the case of specular reflection. An ideal diffuse reflecting surface is said to exhibit Lambertian reflection, meaning that there is equal luminance when viewed from all directions lying in the half-space adjacent to the surface.</div></div><div class="bookmark-href"><img src="https://en.wikipedia.org/static/apple-touch/wikipedia.png" class="icon bookmark-icon"/>https://en.wikipedia.org/wiki/Diffuse_reflection</div></div><img src="https://upload.wikimedia.org/wikipedia/commons/b/bd/Lambert2.gif" class="bookmark-image"/></a></figure></div></div><h3 id="b56c0882-d88d-49fd-82f3-b28ed9a7c7c1" class="">Roughness vs specular</h3><p id="ce1bef53-6105-40ec-a50e-2357dce918de" class="">In shaders, roughness and specular (reflectivity) are not the same thing and nor are they tied together. Roughness controls the microsurface detail which means how blurry or sharp the refection is. Specular controls how much light a surface reflects and the color of the reflection.</p><p id="e813cbe2-d80b-4607-99c5-02c1e2d78681" class="">Specularity refers to the amount of specular light reflected by a surface. This value is inherent to the Material type, and usually the default value of 0.5 is accurate. The Specular input is not used for reflection/specularity maps or to add surface variation. These should be handled in the Roughness map. Unreal Engine uses a default Specular of 0.5, which represents approximately 4% specular reflection. This value is accurate for a vast majority of materials.</p><p id="f2f64a10-2fd7-444b-b209-4188db59601d" class="">Contrary to instinct, the roughness of a material has a minimal impact on the diffuse reflection but a great impact on the specular reflection. </p><figure id="5405b893-e87b-4a38-bb5a-cf5af6815a36" class="image"><a href="impact_of_roughness_on_bounce_lighting_v2.jpg"><img style="width:708px" src="impact_of_roughness_on_bounce_lighting_v2.jpg"/></a><figcaption>A white light shines perpendicular on a flat plane. The resulting light scattered around is the result of diffuse reflections (light bounces). </figcaption></figure><figure id="9cb9c35f-728f-45c4-809e-6318e9d0e696" class="image"><a href="impact_of_roughness_on_bounce_lighting_v3.jpg"><img style="width:708px" src="impact_of_roughness_on_bounce_lighting_v3.jpg"/></a><figcaption>Reducing the value of the color of the object directly reduces the amount of light being scattered around (light bounce). </figcaption></figure><h3 id="38b78caf-e0ba-455b-a57e-79028abf15aa" class="">Specular vs Roughness workflows</h3><p id="7711a963-ab87-40f1-bb3a-768dbb2749b3" class="">Most engines assume a roughness workflow, with most artist working in the roughness workflow and leaving specular at default (0.5 == 4% specular). Notable difference being the CryEngine, which only uses specular based materials. This was done because when they had to decide between roughness or specular, they were building RYSE Son of Rome and that project required a lot of good metallic transitions, something that causes artifacts in the roughness workflow. </p><p id="c0864103-280e-4d81-bcd9-af09b4e92609" class="">Roughness is a parameter that is easily understood by artists, whereas specular is a bit more involved and requires more knowledge. Before the BSDF shader models, everything was done via specular. </p><h3 id="905aa78d-20fc-4b53-af31-a8ceca966ac0" class="">Specular workflow</h3><p id="35f385a4-84a9-4619-9e0a-3a31cbfe7310" class="">In the Specular workflow, a <strong>gloss map</strong> is used to define the smoothness of a surface as opposed to a <strong>roughness map</strong>. <strong>Specular maps</strong> are special because in some cases they should be colored. Most non-metals reflect 2% to 5% of the light as specular and the highlight is monochrome/gray. As the variation is so little, it is often enough to use a constant specular value instead of a specular texture map. However, if metal and non-metal are mixed in a single texture, it is required to use a specular map, as metal has a much brighter specular color than non-metal. </p><figure id="2f1f56c9-ba39-4359-8dfa-5a517ec8b3ba" class="image"><a href="shader_values_1.jpg"><img style="width:708px" src="shader_values_1.jpg"/></a></figure><figure id="13d71f1b-523f-496b-8b2f-5f1f9865cb23" class="image"><a href="SPEC_Range_new_copy.png"><img style="width:708px" src="SPEC_Range_new_copy.png"/></a></figure><figure id="a5cc01fe-843c-45ea-bb09-27ba3fe5052b"><a href="https://docs.cryengine.com/display/SDKDOC2/Creating+Textures+for+Physically+Based+Shading" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Creating Textures for Physically Based Shading - CRYENGINE 3 Manual - Documentation</div><div class="bookmark-description">Please note that many example images shown in this article state that Material Diffuse Color should be 186/187. This was correct on earlier iterations of the PBR implementation but is no longer the case.</div></div><div class="bookmark-href"><img src="https://docs.cryengine.com/s/655o80/8703/51k4y0/90/_/favicon.ico" class="icon bookmark-icon"/>https://docs.cryengine.com/display/SDKDOC2/Creating+Textures+for+Physically+Based+Shading</div></div></a></figure><p id="4bb314c0-b5fe-4b98-a004-d2091bd37c77" class="">
+</p><p id="9cecd07c-88e7-48af-800e-89f1438dc77e" class="">More resources for PBS</p><p id="751e992d-dafd-4e4b-b42c-d7b030c3b0b6" class="">2014: <a href="https://blog.selfshadow.com/publications/s2014-shading-course/">https://blog.selfshadow.com/publications/s2014-shading-course/</a> </p><p id="8bb85b75-839c-48cf-872f-46e1628f442c" class="">2015: <a href="https://blog.selfshadow.com/publications/s2015-shading-course/">https://blog.selfshadow.com/publications/s2015-shading-course/</a></p><p id="300c4e61-c229-4005-9f31-75259d5f8a45" class="">2016: <a href="https://blog.selfshadow.com/publications/s2016-shading-course/">https://blog.selfshadow.com/publications/s2016-shading-course/</a> </p><p id="77a38549-57d5-42eb-af73-735068abee5b" class="">2017: <a href="https://blog.selfshadow.com/publications/s2017-shading-course/">https://blog.selfshadow.com/publications/s2017-shading-course/</a> </p><h1 id="b0c64369-3344-4172-a012-6741c7e3d040" class="">Optimizing materials</h1><p id="28428711-2e3d-4359-bec3-41c73d7e88fb" class="">The amount of instructions and samplers in a material are generally the two most important statistics. Texture resolution </p><h2 id="afd38a94-7ad5-497a-9dc1-2f6a6ea6d13d" class="">Channel packing</h2><p id="937bd053-3050-4439-ae47-b3a8595f8ff7" class="">Channel packing is a method where we store multiple unrelated 2D maps into a single 3D map, like Metallic, Roughness, Occlusion (MRO/ORM) or Base Color plus Alpha or Base Color plus Roughness (BcA/BcR). This is useful to reduce the amount of texture samplers in a material, increasing performance. </p><p id="9ed8bf2c-375a-4022-80d4-5c1da192247e" class="">Be aware that Texture Samplers NOT sharing the same UV set have their cost increased, especially for Virtual Texture Samplers. </p><h3 id="0399f47c-96e5-4aec-ab2f-809b9eb25b48" class="">Channel packing overview</h3><p id="3d548d4f-197e-484f-a702-e45c0669192a" class="">There’s 4 channels to a texture. The Green channel has 1 more bit-size so if you’re packing gradients, that’s the channel to do it in. The alpha channel has its own compression setting so if you’re looking for crisp results across mips, put it there (high detail/frequency). </p><h3 id="dfb73d24-8a16-4b21-8352-314acb547607" class="">Channel packing with normals</h3><p id="2332d502-f260-4207-a00b-5a5373baf1f7" class="">Generally speaking it’s bad practice to channel pack things together with a normal map. </p><p id="5dcc61ea-9f8b-426c-b9c5-c1255c802f9a" class="">The Coalition channel packs the Normal X and Y together with a Roughness and Metallic into a BC7. I didn’t know this was possible and bears looking in to. See here: </p><figure id="b7af2120-0110-4b76-bd6d-11592b16ea20"><a href="https://youtu.be/X2FBFFBDJf0?t=1078" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">The Making of “Alpha Point”—UE5 Technical Demo | GDC 2021</div><div class="bookmark-description">Catch the public debut of Alpha Point, a UE5 technical demo created by The Coalition to evaluate UE5 on the Xbox Series X/S. Hear what the team learned as they tested internal Nanite assets in Lumen-driven lighting scenarios, as well as their thoughts on how UE5’s performance and memory stacks up in Xbox Series X and S-style production environments. 
+
+Presented by Kate Rayner, Studio Technical Director and Colin Penty, Technical Art Director at The Coalition</div></div><div class="bookmark-href"><img src="https://www.youtube.com/s/desktop/afaf5292/img/favicon_144x144.png" class="icon bookmark-icon"/>https://youtu.be/X2FBFFBDJf0?t=1078</div></div><img src="https://i.ytimg.com/vi/X2FBFFBDJf0/maxresdefault.jpg" class="bookmark-image"/></a></figure><p id="0ab773b2-f155-426b-bb80-3c4899fa782f" class="">They didn’t do this for Gears 4, but for Gears 5 they started doing this to keep the size down, which was apparently necessary. Deathrey mentions one problem with this: </p><div id="826c6246-b43f-4f50-8524-68ca2e265307" class="column-list"><div id="5bae1732-a247-4734-beda-cb26f27d51ba" style="width:50%" class="column"><figure id="02d0ec5c-2a23-47ca-99bc-ea4a658b314d" class="image"><a href="Untitled%2010.png"><img style="width:331px" src="Untitled%2010.png"/></a></figure></div><div id="06a9e79e-3bde-44a9-a398-393129a91932" style="width:50%" class="column"><figure id="a322d2ec-3b03-4697-a3ba-5d9a8baf352e" class="image"><a href="Untitled%2011.png"><img style="width:330.98333740234375px" src="Untitled%2011.png"/></a></figure></div></div><h2 id="7fe4b0e3-a653-4d07-8ff5-1c1f10fbaa40" class="">Reducing shader instruction count</h2><div id="b74f7e48-020c-46fe-91a2-32a84516dd05" class="column-list"><div id="2bd2c8a4-addc-4fa1-98ab-fee291651d18" style="width:50%" class="column"><p id="d27d31aa-1304-428f-9e10-aaff72e6f252" class="">Unreal offers an out of the box Bake Materials function that basically does what Substance Painter does. This is great for one-offs, but at a larger scale this involves too much manual labor. It reduces texture instructions and texture samplers.  </p></div><div id="4a64f92c-e6b0-4182-9548-ab61b5d0c733" style="width:50%" class="column"><figure id="0b311af8-b040-47ec-a0c2-fae4ca3fd0bd" class="image"><a href="image_0.png"><img style="width:331px" src="image_0.png"/></a></figure></div></div><p id="e1e9fc2d-a652-49bf-a255-de20fb5b3e66" class="">You should also try and prevent Static Switches as much as possible, especially turn on or off further up a chain of instances. </p><blockquote id="57d51ade-3e30-4325-9ca5-74a1bd61fdbe" class="">A Static Switch will only create 2 versions of the material internally. This stacks up to maximum possible combinations between them (i.e. 3 switches already creates 9 materials, 4 switches creates 16, etc), which in the end defeats all the advantages of the Material Instance system. </blockquote><blockquote id="8bda891e-e1f1-4299-b409-92ef4a9f34c1" class="">A new version of the Material must be compiled for every used combination of static parameters in a Material, which can lead to a massive increase in shader permutations if abused. Try to minimize the number of static parameters in the Material and the number of permutations of those static parameters that are actually used.</blockquote><p id="c8cec2ef-597e-4c84-9740-9e00cf994cb9" class="">It’s a bit unintuitive so here’s an illustration:</p><figure id="2ce8e5fc-920e-4cd9-bace-6d57a1882340" class="image"><a href="Untitled%2012.png"><img style="width:708px" src="Untitled%2012.png"/></a><figcaption>You’d think the instance down the line with only one switch different shares the same master as its neighbour, but instead it creates a new master material. </figcaption></figure><h1 id="dedde034-c6ee-4517-8b2c-e5938045feee" class="">Advanced material techniques</h1><h2 id="86e4675d-a902-445e-801c-f98e3c996f8d" class="">UV/UDIM</h2><div id="84304153-3b07-4328-a429-8ab90416bdd7" class="column-list"><div id="4be290fe-359d-484c-bd12-479a3afe56b7" style="width:68.75%" class="column"><p id="59eec42d-b5e3-4d95-9f9c-50a35dd8fb3b" class="">Using the UV space of an object beyond 0,0 to 1,1 space we can employ some really cool tricks. In the Dead Space Remake they’ve used that space to color an asset. </p><figure id="cb91fe13-e540-46dc-ae53-fee46e72b69f" class="image"><a href="Untitled%2013.png"><img style="width:455.1166687011719px" src="Untitled%2013.png"/></a></figure></div><div id="29ed23df-6a72-405a-814f-51241477ea02" style="width:31.250000000000007%" class="column"><figure id="152487d3-c0fb-431e-9563-29c85167abfe" class="image"><a href="Untitled%2014.png"><img style="width:206.86666870117188px" src="Untitled%2014.png"/></a></figure></div></div><figure id="c1130894-6aa9-49a5-b032-b33ec99173c1"><a href="https://youtu.be/4jlRuA4bJFI?t=259" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">DEAD SPACE REMAKE Official Art Deep-Dive (2023) 4K</div><div class="bookmark-description">Dead Space Remake Official Art Deep Dive Overview New for PC, PS5, XBOX SERIES X in amazing remastered/AI Upscaled 4K ULTRA HD quality and smooth 60 FPS.
+
+Release date: January 2023
+
+Dead Space will be returning as a remake completely rebuilt from the ground up. The game is being developed exclusively for next generation consoles and PC, raising the level of horror and immersion to unprecedented heights for the franchise through stunning visuals, audio, and controls powered by the Frostbite game engine. Dead Space Remake is being developed by Motive Studios and published by Electronic Arts.
+
+Enjoy, like &amp; share for more game news videos! 
+
+▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
+
+● LET ME HELP REACH 200K: https://goo.gl/5jvlvB
+♥ LIKE IT? SHARE IT!
+
+▬▬▬▬▬▬▬▬▬▬▬▬ ☯ Social Media&#x27;s ☯ ▬▬▬▬▬▬▬▬▬▬▬▬
+➞ Like me on Facebook: https://www.facebook.com/WildGamerSK
+➞ Follow me on Instagram: https://www.instagram.com/wildgamersk
+➞ Follow me on Twitter: https://twitter.com/WildGamerSK
+➞ Website: https://www.wildgamersk.com/
+
+You can support me also here:
+♥ Donate: https://www.wildgamersk.com/donate</div></div><div class="bookmark-href"><img src="https://www.youtube.com/s/desktop/2a7c6a10/img/favicon_144x144.png" class="icon bookmark-icon"/>https://youtu.be/4jlRuA4bJFI?t=259</div></div><img src="https://i.ytimg.com/vi/4jlRuA4bJFI/maxresdefault.jpg" class="bookmark-image"/></a></figure><p id="069174ea-d41c-456e-8b8b-f0e6904a7a72" class="">For The Ascent they used a similar idea. </p><figure id="caf3d511-199c-474b-b3cc-e9ae3dd49afb"><a href="https://youtu.be/FodXp5BkENk?t=784" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Building the World of &#x27;The Ascent&#x27;</div><div class="bookmark-description">In this GDC 2022 session, Neon Giant’s Tor Frick goes into detail on how the team approached and solved the challenges along the way, not only in 3D content creation and level building, but also stylistically. 
+
+Head to GDC Vault (http://www.gdcvault.com) for the latest video-on-demand sessions from GDC 2022—with several GDC videos available to watch for free!
+
+Join the GDC mailing list: http://www.gdconf.com/subscribe
+
+Follow GDC on Twitter: https://twitter.com/Official_GDC 
+
+GDC talks cover a range of developmental topics including game design, programming, audio, visual arts, business management, production, online games, and much more. We post a fresh GDC video every day.  Subscribe to the channel to stay on top of regular updates, and check out GDC Vault  for thousands of more in-depth talks from our archives.</div></div><div class="bookmark-href"><img src="https://www.youtube.com/s/desktop/2a7c6a10/img/favicon_144x144.png" class="icon bookmark-icon"/>https://youtu.be/FodXp5BkENk?t=784</div></div><img src="https://i.ytimg.com/vi/FodXp5BkENk/maxresdefault.jpg" class="bookmark-image"/></a></figure><h2 id="08852ea8-03bb-4b81-8d02-5f31ec431cb3" class="">Custom Primitive Data (UE only)</h2><figure id="42dd7674-9747-4418-9378-87ab913cbe8c"><a href="https://docs.unrealengine.com/4.27/en-US/RenderingAndGraphics/Materials/CustomPrimitiveData/" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Storing Custom Data in a Material Per Primitive</div><div class="bookmark-description">An overview of the Custom Primitive Data workflow for storing custom data per primitive that&#x27;s accessible through Blueprint.</div></div><div class="bookmark-href"><img src="https://docs.unrealengine.com/4.27/Include/Images/touch_icon_114.png" class="icon bookmark-icon"/>https://docs.unrealengine.com/4.27/en-US/RenderingAndGraphics/Materials/CustomPrimitiveData/</div></div><img src="https://docs.unrealengine.com/4.27/Images/placeholder-social.png" class="bookmark-image"/></a></figure><figure id="fde1f446-1c4b-4d77-9984-b38b12ed83a7"><a href="https://youtu.be/QQ-VzeGjLMo" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Optimize with Custom Data | 5-Minute Materials [UE4/UE5]</div><div class="bookmark-description">Hey hey! Today we&#x27;re talking about Custom Data, or Custom Primitive Data which is an extremely awesome way to create variation in your assets, as well as a very effective way of optimizing your scene. Draw calls can be a huge performance bottleneck if left unchecked, but Custom Data allows us to have control over colours and other parameters in materials without breaking instancing or creating many material instances.
+
+Enjoy!
+----------------------------------------
+Patreon: https://patreon.com/prismaticadev
+Discord: https://discord.gg/HUacdHUaXq
+Twitch: https://twitch.tv/prismaticadev
+Twitter: https://twitter.com/prismaticadev
+YouTube: https://youtube.com/c/prismaticadev
+----------------------------------------
+
+Computer Specs:
+Ryzen 3900x 12-core CPU
+MSI Geforce RTX 2080 Super
+64GB Corsair RAM
+One of those fancy nvme m.2 SSD&#x27;s
+
+Programs of choice:
+Unreal Engine 4 - (Game Dev)
+Blender 2.8 - (Animation and Modelling)
+OBS - (Video/screen capture)
+Davinci Resolve - (Video editing)
+Adobe Photoshop - (Graphics and Texturing)
+Quixel Mixer - (Texturing)
+ProTools 11 - (Compositions and mixing)
+OldSchool Runescape - (Chillax time)
+
+Filmed using:
+Sony A7s2 body
+Sony 24-70mm f/2.8 GM lens
+Yonguo YN360 LED&#x27;s for colour
+Yongnuo YN760 chip LED w/ Godox softbox for key
+
+My lovely cats names are Boycat, Girlcat and Ladycat :)</div></div><div class="bookmark-href"><img src="https://www.youtube.com/s/desktop/2a7c6a10/img/favicon_144x144.png" class="icon bookmark-icon"/>https://youtu.be/QQ-VzeGjLMo</div></div><img src="https://i.ytimg.com/vi/QQ-VzeGjLMo/maxresdefault.jpg" class="bookmark-image"/></a></figure><h2 id="72be1665-ce82-4dc9-a1ca-19eef18c3f5a" class="">Triplanar mapping</h2><h3 id="cc6bbcb6-310a-4b83-95e7-b98e0ca26993" class="">World aligned</h3><figure id="f4ce5bfb-9c83-4dee-b9cc-0661f1a8696b"><a href="https://ryandowlingsoka.com/unreal/triplanar-dither-biplanar/" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Triplanar, Dithered Triplanar, and Biplanar Mapping in Unreal</div><div class="bookmark-description">Learn how to setup Triplanar mapping in unreal, and some optimizations to make it run faster.</div></div><div class="bookmark-href"><img src="https://ryandowlingsoka.com/apple-touch-icon.png?v=1.0" class="icon bookmark-icon"/>https://ryandowlingsoka.com/unreal/triplanar-dither-biplanar/</div></div><img src="https://ryandowlingsoka.com/unreal/triplanar-dither-biplanar/header-800.webp" class="bookmark-image"/></a></figure><p id="1a5e354e-7eed-8048-a7df-e67b98077a49" class=""><a href="https://iquilezles.org/articles/biplanar/">https://iquilezles.org/articles/biplanar/</a> </p><figure id="1a5e354e-7eed-8085-b000-ef450ee3933e"><a href="https://www.youtube.com/watch?v=Cq5H59G-DHI" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Your Triplanar is wrong. Here&#x27;s how to make one that works. [UE5]</div><div class="bookmark-description">In this video we go through a correct implementation of the triplanar projection mapping technique for world mapping textures in our shaders.
+We discuss it&#x27;s properties, advantages and shortcomings. Then we build on that to create some new and better tech to fit it on the landscape material.
+
+Download: https://jumpeter.gumroad.com/l/tri-penta-enna-planar
+
+Discord: https://discord.gg/YvXq3t675Q
+Patreon: https://www.patreon.com/VisualTechArt</div></div><div class="bookmark-href"><img src="https://www.youtube.com/s/desktop/dd333b3f/img/logos/favicon_144x144.png" class="icon bookmark-icon"/>https://www.youtube.com/watch?v=Cq5H59G-DHI</div></div><img src="https://i.ytimg.com/vi/Cq5H59G-DHI/maxresdefault.jpg" class="bookmark-image"/></a></figure><h3 id="c184b758-f343-462c-a1e8-5721970d9a03" class="">Object aligned</h3><figure id="811b62f1-c498-457f-88a5-e2fe634a66b0" class="image"><a href="Untitled%2015.png"><img style="width:708px" src="Untitled%2015.png"/></a></figure><h1 id="c429ab7f-1cdf-4dd7-beb6-4d453275b5cb" class="">Naming conventions</h1><h2 id="4ff49e5d-7eb8-4cdd-a383-5c9dd472ed57" class="">Epic’s recommendations</h2><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="d20fd1a7-4754-464e-b0c8-b38fab21e8f6" class="code code-wrap"><code class="language-Plain Text" style="white-space:pre-wrap;word-break:break-all">[AssetTypePrefix]_[AssetName]_[Descriptor]_[OptionalVariantLetterOrNumber]</code></pre><figure id="8b609b14-877d-4219-8d9d-a23e6e038e28"><a href="https://docs.unrealengine.com/5.2/en-US/recommended-asset-naming-conventions-in-unreal-engine-projects/" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Recommended Asset Naming Conventions</div><div class="bookmark-description">A recommended naming convention to help organize your Assets.</div></div><div class="bookmark-href"><img src="https://docs.unrealengine.com/5.2/Include/Images/touch_icon_114.png" class="icon bookmark-icon"/>https://docs.unrealengine.com/5.2/en-US/recommended-asset-naming-conventions-in-unreal-engine-projects/</div></div><img src="https://docs.unrealengine.com/5.1/Images/placeholder-social.png" class="bookmark-image"/></a></figure><h2 id="81f5be76-aa7d-42fc-af47-12ee820c34f8" class="">Ready at Dawn</h2><p id="ed47e745-5e6e-4b50-93b5-38a19864c91a" class="">For The Order: 1886 they use a hierarchical layering system which has some really nice naming conventions that are way better than most I’ve seen. They derive a Common material (cmn) from one or multiple Templates (mtt), blending between them using various alpha masks. </p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="e4b15490-b835-4d12-8279-c4d92ce1d2cc" class="code code-wrap"><code class="language-Plain Text" style="white-space:pre-wrap;word-break:break-all">[material hierarchy indication]_[material type]_[primary tuning variable]_[intensity of variable]</code></pre><ul id="7625b29b-291e-413f-9dd2-577e021a0388" class="bulleted-list"><li style="list-style-type:disc">mtt_brass_polished_025</li></ul><ul id="8c40e7cf-e4ec-4368-b628-7ac00a26b3b1" class="bulleted-list"><li style="list-style-type:disc">cmn_brass_a_tile_spotted_dark</li></ul><ul id="48bc5110-2522-4436-a355-ea6ae195199b" class="bulleted-list"><li style="list-style-type:disc">cmn_steel_a_tile_dark</li></ul><ul id="91f089f7-5963-43e8-acde-58f5f8108ad2" class="bulleted-list"><li style="list-style-type:disc">wpn_thermitegun_source</li></ul><div id="01153b4c-4c36-4530-b123-0f31fcc47490" class="column-list"><div id="b2285d17-69ce-4329-97f0-14b196cb6ad6" style="width:50.00000000000002%" class="column"><figure id="8ede4066-58ce-4cd7-bd52-904a84942ffd" class="image"><a href="Untitled%2016.png"><img style="width:332px" src="Untitled%2016.png"/></a></figure></div><div id="90ae13ed-3956-4fc2-9b5c-de503e11118e" style="width:50.000000000000014%" class="column"><figure id="95352b1a-ed8b-4dd4-bd3f-853c3b48316b" class="image"><a href="Untitled%2017.png"><img style="width:331px" src="Untitled%2017.png"/></a></figure></div></div><figure id="94b3f5c5-fc16-437e-90a6-88efb75a6512" class="image"><a href="Untitled%2018.png"><img style="width:708px" src="Untitled%2018.png"/></a></figure><h1 id="92995643-9e1d-4496-8fea-aa0dfae144e7" class="">Resources, see also</h1><p id="216bd0cc-a8e8-467b-aac4-33afcd96151a" class="">Sebastien Lagarde has some fantastic resources. His PDF about the art direction of Remember Me is great and shows a lot of the systemic thinking of how the studio prepared artists for the PBR workflow<div class="indented"><p id="b3d7e62b-d96a-401a-905a-9c19ddaa3ccc" class=""><a href="https://seblagarde.files.wordpress.com/2013/08/gdce13_lagarde_harduin_light.pdf">https://seblagarde.files.wordpress.com/2013/08/gdce13_lagarde_harduin_light.pdf</a> </p></div></p><p id="a3aedc3b-c4d2-496c-be8f-c615219fc629" class="">PBR value guides which are referenced all over the place<div class="indented"><p id="5325be54-62c7-4f6d-bdcb-35ed8e52cf00" class=""><a href="https://seblagarde.files.wordpress.com/2014/04/dontnodgraphicchartforunrealengine4.png">https://seblagarde.files.wordpress.com/2014/04/dontnodgraphicchartforunrealengine4.png</a> </p><p id="9a620c9f-9e6c-4d0f-a79b-3e32588768fc" class=""><a href="https://physicallybased.info/">https://physicallybased.info/</a> </p></div></p><p id="0ce63472-e5ef-4633-8737-de62fb2ecff6" class="">Henry Labounta’s notes on Art Direction Tools for Photo Real Games<div class="indented"><p id="63a163b4-4646-4ddb-8444-fe1d8a63bf96" class=""><a href="https://web.archive.org/web/20110424200123/https://stachmo.wordpress.com/2011/03/12/the-epic-gdc11-adventure-day-5/">https://web.archive.org/web/20110424200123/https://stachmo.wordpress.com/2011/03/12/the-epic-gdc11-adventure-day-5/</a></p></div></p><p id="4d402c43-f19c-4ea6-9ad4-d744bcc31760" class="">Ready at Dawn has some great notes on how they managed materials for The Order: 1886 which looks fucking amazing<div class="indented"><p id="3797ec40-5e69-4188-a1da-620c645b49bb" class=""><a href="https://blog.selfshadow.com/publications/s2013-shading-course/rad/s2013_pbs_rad_slides.pdf">https://blog.selfshadow.com/publications/s2013-shading-course/rad/s2013_pbs_rad_slides.pdf</a></p></div></p><p id="bcbb627b-3ea9-4833-9d72-b99ec1173490" class="">Vincent Derozier has a lot of tutorials and resources related to materials<div class="indented"><p id="f9a82b99-9cf2-45d1-af44-46c59dde4496" class=""><a href="https://www.artstation.com/vincentderozier">https://www.artstation.com/vincentderozier</a></p></div></p><p id="d8542a10-7e04-4b93-96bf-401434017635" class="">Playground Games did some insane lookdev on car paint shaders which is quite interesting<div class="indented"><figure id="3070ce66-b5f4-4ecf-be42-a976144e65c8"><a href="https://www.gdcvault.com/browse/gdc-19/play/1025994" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Physically-Based Calibration: Accurate Material Production in &#x27;Forza Horizon 4&#x27;</div><div class="bookmark-description">With &#x27;Forza Horizon 4&#x27;, Playground Games has developed a novel Physically-Based Calibration (PBC) pipeline based on spectrophotometry to match game appearances of nearly 900 real-world automotive paint materials with unprecedented accuracy....</div></div><div class="bookmark-href"><img src="https://www.gdcvault.com/img/favicon.ico" class="icon bookmark-icon"/>https://www.gdcvault.com/browse/gdc-19/play/1025994</div></div><img src="https://ubm-twvideo01.s3.amazonaws.com/o1/vault/gdc2019/images/gdc19-thumbnail.png" class="bookmark-image"/></a></figure></div></p><ul id="3b2c32ee-4ffe-44b6-820f-a0dc2ca07ffe" class="toggle"><li><details open=""><summary>Notes</summary><p id="c9c4bf06-a8fa-4e42-b6b8-15b5f3a6419a" class="">- Macbeth Munsell Color Checker for shooting your own reference.</p><p id="c769c526-b1cd-4720-ab9e-0dab07492545" class="">- best time to get proper reference for a surface texture or some large piece of detail is on an overcast day.</p><p id="fa45bdeb-739b-4212-ae0b-1f952362edca" class="">- use reference daily, in comparison to what you’re making, in every review, <em>always. </em></p><p id="60984f1b-599d-4df8-952e-5485af286858" class="">- Don’t just tack reference to a wall and say it’s there for when you need it.  Look at it constantly.</p><p id="2d7c169c-01d2-4963-989b-de029f375942" class="">- black contact shadows to ground objects to surfaces.</p><p id="638d513c-8a80-452c-ae37-5cc7bbd86fd3" class="">- when reviewing a scene, check it in all viewport viewing modes.  The <br/>scene should read properly always, whether it is a grey surfaced view, <br/>flat view, texture only view, or lit view.<br/></p></details></li></ul><h3 id="30b4b5cd-f060-4321-8248-99f6f77237ef" class="">Material &amp; texture artists</h3><p id="b20f42a8-dea5-41c3-b0b7-b597449661f3" class="">Free nodes and other setups: </p><figure id="cfd3f998-11a2-4940-92df-457a7b18458e"><a href="https://www.artstation.com/nova__12" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Maxime Guyard-Morin</div><div class="bookmark-description">Hi there!  I’m Maxime, a Material &amp;amp; Technical Artist with an attraction to realistic Art Direction, currently working in the Games Industry on AA titles. I always look to provide players with the best experience possible, and to do this I&#x27;m always learning new skills &amp;amp; improving myself as well as helping my team by sharing knowledge &amp;amp; providing consistent feedbacks.  I spend most of my time working in Substance Designer, painting miniatures, listening (or playing) Melodic Death Metal and helping people pronounce my name.</div></div><div class="bookmark-href"><img src="https://www.artstation.com/assets/apple-touch-icon-72x72-precomposed-0821645e6d96dc5fbf8422c2ee2a3898.png" class="icon bookmark-icon"/>https://www.artstation.com/nova__12</div></div><img src="https://cdna.artstation.com/p/users/covers/000/971/370/default/d71b45c8d896522635406ef776bb90f8.jpg?1617582555" class="bookmark-image"/></a></figure><p id="d2fb17f9-a3ee-4865-8d55-d869cc89f10a" class="">Breakdowns and deep dives:</p><figure id="8f075ae5-cac7-4986-ad33-9aa1687e2bdc"><a href="https://www.artstation.com/iammalte" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Malte Resenberger-Loosmann</div><div class="bookmark-description">www.trigon-art.com  Working as Hard-Surface and Materials artist for over 15 years with focus on realistic designs I support companies by improving workflows and pipelines to raise the bar of visual quality and production efficiency.   I have been providing my expertise to AAA studios, Indie development teams, and CGI companies in enhancing their artistic processes and pushing the creation of in-game and CGI content. My daily routine as a 3D artist involves utilizing both Unreal and Unity to produce exceptional real-time and CGI assets. Additionally, I possess a strong inclination towards replicating real-life materials within game and cinematic environments and developing material libraries that can be shared among artists.  mail@trigon-art.com</div></div><div class="bookmark-href"><img src="https://www.artstation.com/assets/apple-touch-icon-72x72-precomposed-0821645e6d96dc5fbf8422c2ee2a3898.png" class="icon bookmark-icon"/>https://www.artstation.com/iammalte</div></div><img src="https://cdnb.artstation.com/p/users/covers/000/006/303/default/67854764d1552c5f6ae6e76f313fca78.jpg?1690626676" class="bookmark-image"/></a></figure><p id="38a54b8a-049a-4bc1-b6d3-ab79b885ca4d" class="">Varied and long experience:</p><figure id="4120feff-43b3-4594-96c9-844bf3f8316c"><a href="https://www.artstation.com/rogelio" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Rogelio Olguin</div><div class="bookmark-description">Rogelio Olguin is a Lead Artist at Nvidia. Rogelio’s experience comes from working at various studios, namely Epic Games, Crystal Dynamics, Naughtydog, and  343 Industries Microsoft. His hobbies include being an avid gamer and developer in the industry, as well as actively participating in the CG art community. Rogelio has completed mentorships and enjoys sharing his knowledge through presentations such as GDC and tutorials.  His core focus lies within materials and environment techniques. While Rogelio brings a unique perspective to materials, his current day-to-day tasks include production and management of artists at 343. Rogelio is driven to push the boundaries of what is possible while finding new techniques to better serve his industry.</div></div><div class="bookmark-href"><img src="https://www.artstation.com/assets/apple-touch-icon-72x72-precomposed-0821645e6d96dc5fbf8422c2ee2a3898.png" class="icon bookmark-icon"/>https://www.artstation.com/rogelio</div></div><img src="https://cdnb.artstation.com/p/users/covers/000/002/685/default/90dbaafcc646853be9dbc19cb8f4fdc8.jpg?1653693291" class="bookmark-image"/></a></figure><p id="c390af3d-8c49-4035-94d9-017c152047d3" class="">High quality stuff:</p><figure id="9168ecc4-1a48-437a-a83b-f630bbd8a995"><a href="https://www.artstation.com/stanbrown" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Stan Brown</div><div class="bookmark-description">A Texture / Material Artist from New Zealand - specializing in creation of grounded, believable materials using a variety of tools and techniques.</div></div><div class="bookmark-href"><img src="https://www.artstation.com/assets/apple-touch-icon-72x72-precomposed-0821645e6d96dc5fbf8422c2ee2a3898.png" class="icon bookmark-icon"/>https://www.artstation.com/stanbrown</div></div><img src="https://cdna.artstation.com/p/users/covers/000/910/502/default/3c8c4089a944ff871d41b2119ca89d96.jpg?1657841870" class="bookmark-image"/></a></figure><p id="010754c3-7f12-41df-9970-99dc530394ea" class="">Naughty Dog artist:</p><figure id="76cea868-dc5a-4f86-a8fc-ee6b50cb9e78"><a href="https://www.artstation.com/jaredsobotta" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Jared Sobotta</div><div class="bookmark-description">Hello, my name is Jared Sobotta, I am an Environment Artist currently employed at Naughty Dog, in Santa Monica. I am a goal-oriented hard working person with a strong work ethic. I will do my best in any situation presented to me and I consider myself a very self-motivated person. I enjoy all aspects of art and would love to be considered for any position that is both challenging and rewarding. I am knowledgeable and very skilled with many different software packages across many operating systems.  Specialties:3D Modeling, Texturing, Uv&#x27;ing, baking maps, PBR workflows, Materials, Character Lighting, Environment Lighting, Production, and Development.  Also, have experience: -Animation -Rigging    Software Specialties:   -Maya -3D Studio Max -Z-brush -Mudbox -Mental Ray -Adobe Photoshop -Adobe Premiere -Unreal 4 Engine -Frostbite 3 Engine (FrosteEd)  -Unreal 3 Engine -CryEngine 3 (Sandbox) -Enlighten Plugin -3D Coat -Crazy Bump -Xnormal -World Machine -Microsoft Office -Perforce Integration</div></div><div class="bookmark-href"><img src="https://www.artstation.com/assets/apple-touch-icon-72x72-precomposed-0821645e6d96dc5fbf8422c2ee2a3898.png" class="icon bookmark-icon"/>https://www.artstation.com/jaredsobotta</div></div><img src="https://cdna.artstation.com/p/users/covers/000/053/292/default/5cecbfbead56174fcbb7d7b7df38c191.jpg?1593472841" class="bookmark-image"/></a></figure><p id="10ae354e-7eed-8030-a34b-ed46ff694fdb" class="">Amazing quality realistic materials:</p><figure id="10ae354e-7eed-80c5-8de0-dad7c4964e3b"><a href="https://www.artstation.com/joetaylorart" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Joe Taylor</div><div class="bookmark-description">Material Artist @ That&#x27;s No Moon</div></div><div class="bookmark-href"><img src="https://www.artstation.com/assets/apple-touch-icon-72x72-precomposed.png" class="icon bookmark-icon"/>https://www.artstation.com/joetaylorart</div></div><img src="https://cdna.artstation.com/p/users/covers/000/586/102/small/217b75d7bc649883399045ad9fb36a41.jpg?1726404233" class="bookmark-image"/></a></figure><p id="1a8e354e-7eed-8040-be84-c9ceb5085eeb" class="">Nicely stylized realism materials:</p><figure id="1a8e354e-7eed-80d0-bd66-d74257855771"><a href="https://www.artstation.com/artwork/8BPKKQ" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Civilization 7 Wall Materials, Clark Coots</div><div class="bookmark-description">Sample of Wall Materials for Civilization 7. I was responsible for creating and managing approximately 300 unique materials, and 1200 tinted variations.</div></div><div class="bookmark-href"><img src="https://www.artstation.com/assets/apple-touch-icon-72x72-precomposed.png" class="icon bookmark-icon"/>https://www.artstation.com/artwork/8BPKKQ</div></div><img src="https://cdnb.artstation.com/p/assets/covers/images/085/031/569/large/clark-coots-clark-coots-walls-thumb.jpg?1739813845" class="bookmark-image"/></a></figure></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
