@@ -22,7 +22,7 @@ This collection of papers does a great job at explaining the ground work of real
 
 Mind you, not all shaders are BSDFs! [https://www.shadertoy.com/](https://www.shadertoy.com/) has some great examples of crazy shaders written in HLSL. 
 
-![shader vs material.png](/img/shader vs material.png)
+![shader_vs_material.png](/img/shader_vs_material.png)
 
 ![brick_wall.png](/img/brick_wall.png)
 
@@ -30,15 +30,15 @@ Mind you, not all shaders are BSDFs! [https://www.shadertoy.com/](https://www.sh
 
 BSDF is a superset and the generalization of the BRDF and BTDF. The concept behind all BxDF functions could be described as a 4-dimensional function: a function of light direction (l) and view direction (v), the normal of the surface (n), and surface tangent (t). 
 
-![brdf vs btdf.png](/img/brdf vs btdf.png)
+![brdf_vs_btdf.png](/img/brdf_vs_btdf.png)
 
-![brdf function.png](/img/brdf function.png)
+![brdf_function.png](/img/brdf_function.png)
 
 The Base Color, Roughness, or Normal inputs of a BSDF are all BRDFs in their own right, with their own calculations. These inputs are always numbers, but the way we describe those numbers can be using math, flat values, or textures. Textures are really just 2 or 3 dimensional collection of numbers. 
 
 The bidirectional scattering distribution function (BSDF) radiometrically characterizes the scatter of optical radiation from a surface as a function of the angular positions of the incident and scattered beams. By definition, it is the ratio of the scattered radiance to the incident irradiance: the unit is inverse steradian. The term bidirectional reflectance distribution function (BRDF) is used when specifically referring to reflected scatter. Likewise, bidirectional transmittance distribution function (BTDF) refers to scatter transmitted through a material. Read more [here](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4930030/). 
 
-![diffuse and specular.png](/img/diffuse and specular.png)
+![diffuse_and_specular.png](/img/diffuse_and_specular.png)
 
 ### Shader vs Material
 
@@ -68,7 +68,7 @@ Less guessing, more out-of-the-box, more guidelines online, self-diagnosable.
 
 ## Getting started
 
-![is surface metal.png](/img/is surface metal.png)
+![is_surface_metal.png](/img/is_surface_metal.png)
 
 ## Physically based values
 
@@ -93,11 +93,11 @@ I found another source that notes this:
 
 [https://physicallybased.info/tools/](https://physicallybased.info/tools/) Tool to transform between color encodings. 
 
-![srgb notation.png](/img/srgb notation.png)
+![srgb_notation.png](/img/srgb_notation.png)
 
 ![dontnodgraphicchartforunrealengine4.png](/img/dontnodgraphicchartforunrealengine4.png)
 
-![filament pbr chart.jpeg](/img/filament pbr chart.jpeg)
+![filament_pbr_chart.jpeg](/img/filament_pbr_chart.jpeg)
 
 ### Diffuse (sometimes referred to as base color or albedo)
 
@@ -117,7 +117,7 @@ You can test these values in Substance Painter/Designer using the PBR Validate n
 
 The name *diffuse* comes from the fact that they are responsible for *diffuse reflection* (see Diffuse reflection vs Specular reflection), which is the phenomena responsible for giving materials a color in real life. In general, diffuse values are much brighter then you’d think, which makes authoring them a little bit challenging. If your diffuse maps are too dark, you will see much less light bouncing around the scene than you would expect (see Roughness vs Specular). 
 
-![diffuse only remember me.png](/img/diffuse only remember me.png)
+![diffuse_only_remember_me.png](/img/diffuse_only_remember_me.png)
 
 ### Diffuse in dieletric (metallic) materials
 
@@ -147,7 +147,7 @@ In materials, the roughness input controls how rough or smooth a surface is. In 
 
 *Hard* materials have very dense structures and therefore do not allow the light to scatter inside their structures a lot. *Soft* materials (like skin) have a lot of scattering going on, which we can replicate using *subsurface scattering*. 
 
-![light scattering.png](/img/light scattering.png)
+![light_scattering.png](/img/light_scattering.png)
 
 ![smoothness_roughness_surface.jpg](/img/smoothness_roughness_surface.jpg)
 
@@ -163,7 +163,7 @@ In the case of colored objects (absorbent), diffused rays will lose some wavelen
 
 A cherry reflects diffusely red light, absorbs all other colors and has a specular reflection which is essentially white (if the incident light is white light). This is quite general, because, except for metals, the reflectivity of most materials depends on their refractive index, which varies little with the wavelength, so that all colors are reflected nearly with the same intensity.
 
-![diffuse and specular reflection.png](/img/diffuse and specular reflection.png)
+![diffuse_and_specular_reflection.png](/img/diffuse_and_specular_reflection.png)
 
 [Diffuse reflection](https://en.wikipedia.org/wiki/Diffuse_reflection)
 
@@ -233,15 +233,15 @@ The Coalition channel packs the Normal X and Y together with a Roughness and Met
 
 They didn’t do this for Gears 4, but for Gears 5 they started doing this to keep the size down, which was apparently necessary. Deathrey mentions one problem with this: 
 
-![deathrey 1.png](/img/deathrey 1.png)
+![deathrey_1.png](/img/deathrey_1.png)
 
-![deathrey 2.png](/img/deathrey 2.png)
+![deathrey_2.png](/img/deathrey_2.png)
 
 ## Reducing shader instruction count
 
 Unreal offers an out of the box Bake Materials function that basically does what Substance Painter does. This is great for one-offs, but at a larger scale this involves too much manual labor. It reduces texture instructions and texture samplers.  
 
-![unreal bake materials.png](/img/unreal bake materials.png)
+![unreal_bake_materials.png](/img/unreal_bake_materials.png)
 
 You should also try and prevent Static Switches as much as possible, especially turn on or off further up a chain of instances. 
 
@@ -253,7 +253,7 @@ You should also try and prevent Static Switches as much as possible, especially 
 
 It’s a bit unintuitive so here’s an illustration:
 
-![shader permutations.png](/img/shader permutations.png)
+![shader_permutations.png](/img/shader_permutations.png)
 
 You’d think the instance down the line with only one switch different shares the same master as its neighbor, but instead it creates a new master material. 
 
@@ -263,9 +263,9 @@ You’d think the instance down the line with only one switch different shares the
 
 Using the UV space of an object beyond 0,0 to 1,1 space we can employ some really cool tricks. In the Dead Space Remake they’ve used that space to color an asset. 
 
-![uv index.png](/img/uv index.png)
+![uv_index.png](/img/uv_index.png)
 
-![uv index tool.png](/img/uv index tool.png)
+![uv_index_tool.png](/img/uv_index_tool.png)
 
 [DEAD SPACE REMAKE Official Art Deep-Dive (2023) 4K](https://youtu.be/4jlRuA4bJFI?t=259)
 
@@ -291,7 +291,7 @@ For The Ascent they used a similar idea.
 
 ### Object aligned
 
-![object aligned world aligned texture.png](/img/object aligned world aligned texture.png)
+![object_aligned_world_aligned_texture.png](/img/object_aligned_world_aligned_texture.png)
 
 # Naming conventions
 
@@ -316,11 +316,11 @@ For The Order: 1886 they use a hierarchical layering system which has some reall
 - cmn_steel_a_tile_dark
 - wpn_thermitegun_source
 
-![rad mat naming.png](/img/rad mat naming.png)
+![rad_mat_naming.png](/img/rad_mat_naming.png)
 
-![rad mat naming 2.png](/img/rad mat naming 2.png)
+![rad_mat_naming_2.png](/img/rad_mat_naming_2.png)
 
-![rad mat naming 3.png](/img/rad mat naming 3.png)
+![rad_mat_naming_3.png](/img/rad_mat_naming_3.png)
 
 # Resources, see also
 
