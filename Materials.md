@@ -14,7 +14,7 @@ See also:
 
 A material is an asset that can be applied to geometry to define its shading. This shading is usually only visible when a light hits the surface, so lighting plays a huge role in materials. The exception is in shader models such as unlit. 
 
-In a material you can define the value of parameters that are available from the shader, such as the color, roughness, and so on. Most of the time when we talk about a shader, it’s a BSDF based on the work Brian Karis. You can see the work that Brian Karis did in this paper:
+In a material you can define the value of parameters that are available from the shader, such as the color, roughness, and so on. Most of the time when we talk about a shader, itâ€™s a BSDF based on the work Brian Karis. You can see the work that Brian Karis did in this paper:
 
 [2013_Siggraph_UE4_BrianKaris.pdf](/img/2013_Siggraph_UE4_BrianKaris.pdf)
 
@@ -51,7 +51,7 @@ Shaders have the following prerequisites:
 
 A shader and a material can be used in different ways, depending on the game engine. In Unreal Engine, the shader used can be based on the target platform selected.
 
-There are generally two ways to do materials; PBR (physically based rendering/shading) and NPR (non-photoreal rendering/shading). The type of shader you use doesn’t imply one or the other, because there are plenty of ways to “break” a PBR shader by giving it “wrong” inputs (more on that later). 
+There are generally two ways to do materials; PBR (physically based rendering/shading) and NPR (non-photoreal rendering/shading). The type of shader you use doesnâ€™t imply one or the other, because there are plenty of ways to â€œbreakâ€ a PBR shader by giving it â€œwrongâ€ inputs (more on that later). 
 
 # PBS (physically based shading)
 
@@ -115,17 +115,17 @@ You can test these values in Substance Painter/Designer using the PBR Validate n
 
 [https://80.lv/articles/validating-pbr-materials-in-ue4/](https://80.lv/articles/validating-pbr-materials-in-ue4/)
 
-The name *diffuse* comes from the fact that they are responsible for *diffuse reflection* (see Diffuse reflection vs Specular reflection), which is the phenomena responsible for giving materials a color in real life. In general, diffuse values are much brighter then you’d think, which makes authoring them a little bit challenging. If your diffuse maps are too dark, you will see much less light bouncing around the scene than you would expect (see Roughness vs Specular). 
+The name *diffuse* comes from the fact that they are responsible for *diffuse reflection* (see Diffuse reflection vs Specular reflection), which is the phenomena responsible for giving materials a color in real life. In general, diffuse values are much brighter then youâ€™d think, which makes authoring them a little bit challenging. If your diffuse maps are too dark, you will see much less light bouncing around the scene than you would expect (see Roughness vs Specular). 
 
 ![diffuse_only_remember_me.png](/img/diffuse_only_remember_me.png)
 
 ### Diffuse in dieletric (metallic) materials
 
-If a shader’s metallic input is above a certain value (near 1.0), the color of the diffuse map is used to color the specular response. That is also why diffuse maps for metals should be authored very brightly (>180 sRGB). 
+If a shaderâ€™s metallic input is above a certain value (near 1.0), the color of the diffuse map is used to color the specular response. That is also why diffuse maps for metals should be authored very brightly (>180 sRGB). 
 
 ### Specular (and cavity)
 
-Specular should generally be kept at .5 which equals to about 4% reflectance, which is good for the vast majority of materials. However, we can use Cavity Maps (small scale ambient occlusion) and multiply with .5 to help the rendering engine occlude more on small scale. This can be helpful because real-time renderers can’t get so granular as is sometimes required. 
+Specular should generally be kept at .5 which equals to about 4% reflectance, which is good for the vast majority of materials. However, we can use Cavity Maps (small scale ambient occlusion) and multiply with .5 to help the rendering engine occlude more on small scale. This can be helpful because real-time renderers canâ€™t get so granular as is sometimes required. 
 
 ### Specular resources
 
@@ -139,7 +139,7 @@ Specular should generally be kept at .5 which equals to about 4% reflectance, wh
 
 ### Roughness
 
-In real life, the phenomena of roughness is the result of light scattering inside the material into many different directions due to micro-detail in the material (on the micro-meter scale). The light that is exiting the material again is considered “bounce light”. 
+In real life, the phenomena of roughness is the result of light scattering inside the material into many different directions due to micro-detail in the material (on the micro-meter scale). The light that is exiting the material again is considered â€œbounce lightâ€. 
 
 The surface shown here on the right is too small scale to approach in geometry, so in rendering engines we lean on roughness maps, but also micro-normal maps to emulate it.
 
@@ -155,7 +155,7 @@ Not only roughness influences the sharpness of the reflection, also a micro-norm
 
 ### Diffuse reflection vs specular reflection
 
-It’s important to note the difference between the specular reflection and the diffuse reflection of a material. 
+Itâ€™s important to note the difference between the specular reflection and the diffuse reflection of a material. 
 
 The diffuse reflection is responsible for scattering light *around*, most of which appears to us via surrounding surfaces. Specular reflection is the light that is reflected directly into our eyes. 
 
@@ -221,17 +221,17 @@ Be aware that Texture Samplers NOT sharing the same UV set have their cost incre
 
 ### Channel packing overview
 
-There’s 4 channels to a texture. The Green channel has 1 more bit-size so if you’re packing gradients, that’s the channel to do it in. The alpha channel has its own compression setting so if you’re looking for crisp results across mips, put it there (high detail/frequency). 
+Thereâ€™s 4 channels to a texture. The Green channel has 1 more bit-size so if youâ€™re packing gradients, thatâ€™s the channel to do it in. The alpha channel has its own compression setting so if youâ€™re looking for crisp results across mips, put it there (high detail/frequency). 
 
 ### Channel packing with normals
 
-Generally speaking it’s bad practice to channel pack things together with a normal map. 
+Generally speaking itâ€™s bad practice to channel pack things together with a normal map. 
 
-The Coalition channel packs the Normal X and Y together with a Roughness and Metallic into a BC7. I didn’t know this was possible and bears looking in to. See here: 
+The Coalition channel packs the Normal X and Y together with a Roughness and Metallic into a BC7. I didnâ€™t know this was possible and bears looking in to. See here: 
 
-[The Making of “Alpha Point”—UE5 Technical Demo | GDC 2021](https://youtu.be/X2FBFFBDJf0?t=1078)
+[The Making of â€œAlpha Pointâ€â€”UE5 Technical Demo | GDC 2021](https://youtu.be/X2FBFFBDJf0?t=1078)
 
-They didn’t do this for Gears 4, but for Gears 5 they started doing this to keep the size down, which was apparently necessary. Deathrey mentions one problem with this: 
+They didnâ€™t do this for Gears 4, but for Gears 5 they started doing this to keep the size down, which was apparently necessary. Deathrey mentions one problem with this: 
 
 ![deathrey_1.png](/img/deathrey_1.png)
 
@@ -251,17 +251,17 @@ You should also try and prevent Static Switches as much as possible, especially 
 > A new version of the Material must be compiled for every used combination of static parameters in a Material, which can lead to a massive increase in shader permutations if abused. Try to minimize the number of static parameters in the Material and the number of permutations of those static parameters that are actually used.
 > 
 
-It’s a bit unintuitive so here’s an illustration:
+Itâ€™s a bit unintuitive so hereâ€™s an illustration:
 
 ![shader_permutations.png](/img/shader_permutations.png)
 
-You’d think the instance down the line with only one switch different shares the same master as its neighbor, but instead it creates a new master material. 
+Youâ€™d think the instance down the line with only one switch different shares the same master as its neighbor, but instead it creates a new master material. 
 
 # Advanced material techniques
 
 ## UV/UDIM
 
-Using the UV space of an object beyond 0,0 to 1,1 space we can employ some really cool tricks. In the Dead Space Remake they’ve used that space to color an asset. 
+Using the UV space of an object beyond 0,0 to 1,1 space we can employ some really cool tricks. In the Dead Space Remake theyâ€™ve used that space to color an asset. 
 
 ![uv_index.png](/img/uv_index.png)
 
@@ -295,7 +295,7 @@ For The Ascent they used a similar idea.
 
 # Naming conventions
 
-## Epic’s recommendations
+## Epicâ€™s recommendations
 
 ```
 [AssetTypePrefix]_[AssetName]_[Descriptor]_[OptionalVariantLetterOrNumber]
@@ -305,7 +305,7 @@ For The Ascent they used a similar idea.
 
 ## Ready at Dawn
 
-For The Order: 1886 they use a hierarchical layering system which has some really nice naming conventions that are way better than most I’ve seen. They derive a Common material (cmn) from one or multiple Templates (mtt), blending between them using various alpha masks. 
+For The Order: 1886 they use a hierarchical layering system which has some really nice naming conventions that are way better than most Iâ€™ve seen. They derive a Common material (cmn) from one or multiple Templates (mtt), blending between them using various alpha masks. 
 
 ```
 [material hierarchy indication]_[material type]_[primary tuning variable]_[intensity of variable]
@@ -334,7 +334,7 @@ PBR value guides which are referenced all over the place
 
 [https://physicallybased.info/](https://physicallybased.info/) 
 
-Henry Labounta’s notes on Art Direction Tools for Photo Real Games
+Henry Labountaâ€™s notes on Art Direction Tools for Photo Real Games
 [https://web.archive.org/web/20110424200123/https://stachmo.wordpress.com/2011/03/12/the-epic-gdc11-adventure-day-5/](https://web.archive.org/web/20110424200123/https://stachmo.wordpress.com/2011/03/12/the-epic-gdc11-adventure-day-5/)
 
 Ready at Dawn has some great notes on how they managed materials for The Order: 1886 which looks fucking amazing
@@ -355,9 +355,9 @@ Playground Games did some insane lookdev on car paint shaders which is quite int
     
     - best time to get proper reference for a surface texture or some large piece of detail is on an overcast day.
     
-    - use reference daily, in comparison to what you’re making, in every review, *always.* 
+    - use reference daily, in comparison to what youâ€™re making, in every review, *always.* 
     
-    - Don’t just tack reference to a wall and say it’s there for when you need it.  Look at it constantly.
+    - Donâ€™t just tack reference to a wall and say itâ€™s there for when you need it.  Look at it constantly.
     
     - black contact shadows to ground objects to surfaces.
     
